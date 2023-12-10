@@ -16,7 +16,6 @@ export async function startApolloServer() {
 
   await server.start();
 
-  // Altere o tipo para Application
   server.applyMiddleware({ app } as any);
 
   const PORT = process.env.PORT || 4000;
