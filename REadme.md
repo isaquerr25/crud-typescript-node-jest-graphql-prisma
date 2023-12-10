@@ -24,6 +24,32 @@ Start the Docker containers:
 docker-compose up -d
 ```
 
+## Prisma Migrations
+
+This project uses [Prisma](https://www.prisma.io/) for database migrations and schema management. Prisma Migrate helps you evolve your database schema over time.
+
+### Applying Migrations
+
+To apply Prisma migrations, follow these steps:
+
+1. Make sure your database connection is configured in the `.env` file or using environment variables.
+
+2. Run the following command to create a new migration:
+
+```sh
+npx prisma migrate dev 
+```
+
+The above command will create a new migration in the prisma/migrations directory. To apply the migration and update the database schema, run:
+
+```sh
+npx prisma migrate deploy
+```
+
+```sh
+npx prisma generate
+```
+
 # Crud-typescript-node-jest-graphql-prisma-redis 
 
 Brief description of your project.

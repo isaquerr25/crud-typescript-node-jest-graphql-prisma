@@ -4,7 +4,10 @@ import { PrismaClient } from '@prisma/client';
 import { Redis } from 'ioredis';
 
 const prisma = new PrismaClient();
-const redis = new Redis();
+const redis = new Redis({
+  host: 'localhost',
+  port: 6379,
+});
 
 @Resolver(User)
 export class UserResolver {
