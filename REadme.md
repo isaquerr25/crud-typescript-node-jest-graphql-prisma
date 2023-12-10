@@ -1,9 +1,3 @@
----
-runme:
-  id: 01HH2JK9A8KP5PNHPKRQ32AQ70
-  version: v2.0
----
-
 ## Docker Compose
 
 This project supports Docker Compose for easy deployment and containerization. Docker Compose is a tool for defining and running multi-container Docker applications.
