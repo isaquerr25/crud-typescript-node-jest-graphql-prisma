@@ -3,13 +3,13 @@ import 'reflect-metadata';
 import express, { Application } from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { buildSchema } from 'type-graphql';
-import { PostResolver } from './resolvers/PostResolver';
+import { UserResolver } from './resolvers/UserResolver';
 
 export const app: Application = express();
 
-async function startApolloServer() {
+export async function startApolloServer() {
   const schema = await buildSchema({
-    resolvers: [PostResolver],
+    resolvers: [UserResolver],
   });
 
   const server = new ApolloServer({ schema });
